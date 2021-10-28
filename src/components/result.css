@@ -1,0 +1,131 @@
+.output {
+    background: white;
+    margin: 2rem -1rem; 
+    border: 2px padding #999; /*параметры рамок*/
+    border-radius: 5px; /*округление рамок*/
+    border: 1px solid blue;
+    padding: 20px;
+  }
+  
+  .output_words{
+    display: inline-block;
+    margin: 8px 2px; 
+    cursor: pointer;
+    transition-property: background-color, margin, box-shadow, padding;
+    transition-duration: 0.3s;
+  }
+  
+  .Subject /*подлежащее*/ {
+    text-decoration: underline; /* Подчёркивание */
+    text-decoration-style: solid;
+  }
+  .Predicate /*сказуемое*/ {
+    text-decoration: underline; /* Подчёркивание */
+    text-decoration-style: double;
+  }
+  .Object /*(direct, indirect) – дополнение*/ {
+    text-decoration: underline; /* Подчёркивание */
+    text-decoration-style: dashed;
+  }
+  .Attribute /*определение*/ {
+    text-decoration: underline; /* Подчёркивание */
+    text-decoration-style: wavy;
+  }
+  .Adverbial_modifier /*обстоятельство*/ {
+    text-decoration: underline; /* Подчёркивание */
+    text-decoration-style: dotted;
+  }
+  
+  .InLine{
+   text-align: left;
+   margin: 20px 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-45% , 3%);
+    background-color: #f1f1f1;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    z-index: 1;
+    border-radius: 3px;
+    transition-property: opacity, display;
+    transition-duration: 0.53s;
+  }
+         
+  .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 0.9;
+  }
+  
+  .output_words:hover {
+      background-color: rgb(238, 240, 147);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+      border-radius: 5px;
+  }
+  
+  /* для элемента input c type="checkbox" */
+  .custom-checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  
+    /* для элемента label, связанного с .custom-checkbox */
+    .custom-checkbox+label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+  
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .custom-checkbox+label::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 0.25em;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+      border-color: #b3d7ff;
+    }
+  
+    /* стили для активного чекбокса (при нажатии на него) */
+    .custom-checkbox:not(:disabled):active+label::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+  
+    /* стили для чекбокса, находящегося в фокусе */
+    /* .custom-checkbox:focus+label::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    } */
+  
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox:focus:not(:checked)+label::before {
+      border-color: #80bdff;
+    }
+  
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox:checked+label::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+  
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox:disabled+label::before {
+      background-color: #e9ecef;
+    }

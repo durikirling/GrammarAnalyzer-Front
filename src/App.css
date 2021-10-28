@@ -1,0 +1,44 @@
+
+body {
+	background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3414159/pub_5ee5dd26c2a70a25b386b3d9_5ee5debd69fe895ccbaa4aec/scale_1200);
+	background-size: cover;
+  background-repeat: repeat;
+	font-size: 20px;
+}
+
+.App {
+  text-align: center;
+  width: 35rem;
+  padding: 3rem;
+  margin: auto; /*"auto" - выравнивание по ширине*/
+  background: rgb(224, 240, 255);
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px 1px black;
+}
+
+button {
+  text-align: center;
+  position: relative;
+  background: rgb(113, 128, 331);
+  border: 1px;
+  border-radius: 5px;
+  color: white;
+  line-height: 0%;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  font-family: Courier New, monospace;
+  font-size: 20px;
+  padding: 30px;
+  box-shadow: 0 0 5px 1px black
+}
+
+/* Элемент меняет цвет при наведении на него */
+button:hover {
+  background-color: rgb(100, 100, 300);
+}
+
+/* Элемент меняет цвет во время нажатия на доли секунд.  */
+button:active {
+  opacity: .7;
+}
