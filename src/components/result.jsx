@@ -26,7 +26,7 @@ class Result extends Component {
 
   underlineWord = (role) => {
     this.checkSelectAll()
-    this.setState({ [role]: !this.state.[role] }) 
+    this.setState({ [role]: !this.state[role] }) 
   };
 
   // underlineSubject = () => {
